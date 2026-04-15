@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { generateReferenceNumber } from './service';
+import { generateReferenceNumber } from './service.js';
 
 describe('generateReferenceNumber', () => {
   it('formats as VH-YYYYMMDD-NNN', () => {
@@ -18,8 +18,8 @@ describe('generateReferenceNumber', () => {
   });
 });
 
-import { createBooking } from './service';
-import type { CreateBookingInput } from './schema';
+import { createBooking } from './service.js';
+import type { CreateBookingInput } from './schema.js';
 import type { SupabaseClient } from '@supabase/supabase-js';
 
 const baseInput: CreateBookingInput = {
