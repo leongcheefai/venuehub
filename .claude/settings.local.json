@@ -4,8 +4,7 @@
       "Bash(npm create:*)",
       "Bash(npm install:*)",
       "Bash(npm run:*)",
-      "Bash(wait)",
-      "Bash(wc -l /Users/leongcheefai/Documents/private/projects/hall-booking-system/docs/plans/*.md)"
+      "Bash(wait)"
     ]
   }
 }
