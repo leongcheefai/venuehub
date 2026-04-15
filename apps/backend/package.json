@@ -8,11 +8,14 @@
   },
   "dependencies": {
     "@hono/node-server": "^1.19.14",
+    "@hono/zod-validator": "^0.7.6",
     "@supabase/supabase-js": "^2.103.1",
-    "hono": "^4.12.14"
+    "hono": "^4.12.14",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@types/node": "^20.11.17",
+    "dotenv": "^17.4.2",
     "tsx": "^4.7.1",
     "typescript": "^5.8.3"
   }
