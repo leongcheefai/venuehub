@@ -17,8 +17,9 @@ export function DetailsStep() {
 
   const {
     register, handleSubmit, setValue, formState: { errors, isSubmitting },
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } = useForm<DetailsValues>({
-    resolver: zodResolver(detailsSchema),
+    resolver: zodResolver(detailsSchema) as any,
     defaultValues: state.details,
   });
 
