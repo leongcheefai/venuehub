@@ -1,4 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
+import { PublicLayout } from '@/shared/components/PublicLayout';
+import { LandingPage } from '@/features/venue/LandingPage';
+import { VenueDetailsPage } from '@/features/venue/VenueDetailsPage';
 
 const Placeholder = ({ title }: { title: string }) => (
   <div className="p-8"><h1 className="text-2xl">{title}</h1></div>
@@ -7,9 +10,11 @@ const Placeholder = ({ title }: { title: string }) => (
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<Placeholder title="Landing" />} />
-      <Route path="/venue" element={<Placeholder title="Venue Details" />} />
-      <Route path="/book" element={<Placeholder title="Book" />} />
+      <Route element={<PublicLayout />}>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/venue" element={<VenueDetailsPage />} />
+        <Route path="/book" element={<Placeholder title="Book" />} />
+      </Route>
       <Route path="/admin/login" element={<Placeholder title="Admin Login" />} />
       <Route path="/admin" element={<Placeholder title="Admin Dashboard" />} />
       <Route path="*" element={<Placeholder title="Not Found" />} />
